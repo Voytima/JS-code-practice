@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+</head>
+
+<body>
+  <!--
+Обязательное задание.
+
+Необходимо реализовать четыре функции, каждая функция должна принимать по два
+числа и выполнять одну из операций (каждая функция выполняет одну из них):
+1. Сложение
+2. Разность
+3. Умножение
+4. Деление
+
+Необходимо сделать так, чтобы функция вернула число, например выражение
+`console.log(sum(2, 6));` должно вывести число 8 в консоль (sum - функция
+сложения в данном примере, ваши названия функций могут отличаться).
+
+Округлять значения, которые возвращают функции не нужно, однако, обратите
+внимание на разность, функция должна вычесть из большего числа меньшее, либо
+вернуть 0, если числа равны.
+
+Функциям всегда передаются корректные числа, проверки на NaN, Infinity делать
+не нужно.
+
+Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
+-->
+  <script>
+    "use strict";
+
+    const a = +prompt("Enter first num: ");
+    const b = +prompt("Enter second num: ");
+
+    /**
+     * Calculates the sum of two numbers;
+     * @param {number} a - first number;
+     * @param {number} b - second number;
+     * @returns {number} - sum of a and b;
+     */
+    function getSum(a, b) {
+      return "Sum is: " + (a + b)
+    }
+
+    /**
+     * Calculates the difference of two numbers;
+     * @param {number} a - first number;
+     * @param {number} b - second number;
+     * @returns {number} - difference of a and b;
+     */
+    function getMinus(a, b) {
+      if (a > b) {
+        return "Diff is: " + (a - b)
+      }
+      return "Diff is: " + (b - a)
+    }
+
+    /**
+     * Calculates the multiplication of two numbers;
+     * @param {number} a - first number;
+     * @param {number} b - second number;
+     * @returns {number} - product of a and b;
+     */
+    function getMul(a, b) {
+      return "Mul is: " + (a * b)
+    }
+
+    /**
+     * Calculates the division of two numbers;
+     * @param {number} a - first number;
+     * @param {number} b - second number;
+     * @returns {number} - quotient of a and b;
+     */
+    function getDiv(a, b) {
+      return "Div is: " + (a / b)
+    }
+
+    console.log(getSum(a, b));
+    console.log(getMinus(a, b));
+    console.log(getMul(a, b));
+    console.log(getDiv(a, b));
+
+  </script>
+</body>
+
+</html>

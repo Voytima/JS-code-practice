@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Homework</title>
+</head>
+
+<body>
+    <!--
+    Решение вопроса из лекции:
+    Как сделать запись чисел массива в обратном порядке циклом for?
+-->
+    <script>
+        "use strict";
+
+        // Вариант из лекции с выводом по возрастанию
+        const arr = [5, 7, 9];
+
+        for (let i = 0; i < arr.length; i++) {
+            console.log(arr[i]);
+        }
+
+        let str = "\n";
+        console.log(str);
+
+        // Решение с выводом по убыванию
+        const arr1 = [5, 7, 9];
+
+        for (let i = 0; i < arr1.length; i++) {
+            for (let j = i + 1; j < arr1.length; j++) {
+                if (arr1[i] < arr1[j]) {
+                    let num = arr1[i];
+                    arr1[i] = arr1[j];
+                    arr1[j] = num;
+                }
+            }
+            console.log(arr1[i]);
+        }
+
+    </script>
+</body>
+
+</html>
